@@ -54,7 +54,7 @@ Dataset: gva_per_worker.csv
 Title: Gross Value Added per an employed person UK cities
 Data: 2011
 Source: http://www.centreforcities.org/data-tool/dataset/european-cities#graph=bar&city=aberdeen&city=aldershot&city=barnsley&city=basildon&city=belfast&city=birkenhead&city=birmingham&city=blackburn&city=blackpool&city=bournemouth&city=bradford&city=brighton&city=bristol&city=burnley&city=cambridge&city=cardiff&city=chatham&city=coventry&city=crawley&city=derby&city=doncaster&city=dundee&city=edinburgh&city=exeter&city=glasgow&city=gloucester&city=huddersfield&city=hull&city=ipswich&city=leeds&city=leicester&city=liverpool&city=london&city=luton&city=manchester&city=mansfield&city=middlesbrough&city=milton-keynes&city=newcastle&city=newport&city=northampton&city=norwich&city=nottingham&city=oxford&city=peterborough&city=plymouth&city=portsmouth&city=preston&city=reading&city=sheffield&city=slough&city=southampton&city=southend&city=stoke&city=sunderland&city=swansea&city=swindon&city=telford&city=wakefield&city=warrington&city=wigan&city=worthing&city=york&sortOrder=high&indicator=total-jobs\\single\\2011&orient=horz
-Description: Gross Value Added per an employed person 63 UK cities, meaning how much of goods and servvices a worker produces 
+Description: Gross Value Added per an employed person 63 UK cities, meaning how much of goods and services a worker produces 
 Row count: 63
 UK Cities: 63
 Columns datatype: numeric
@@ -68,4 +68,24 @@ Description: Unemployment rate in 63 Uk cities in %
 Row count: 63
 UK Cities: 63
 Columns datatype: numeric
+
+8]
+Dataset: road traffic (delay in sec).ods
+Title: Average delay on locally managed 'A' roads in England
+Source: https://www.gov.uk/government/statistics/travel-time-measures-for-the-strategic-road-network-and-local-a-roads-july-2016-to-june-2017
+Description: Average delay in seconds for cars in comparing with free flow for every city in the UK
+Row count: 161
+Cities: 161
+Columns datatype: numeric
+
+9]
+Dataset: *
+Title: Weather in the UK cities
+Source: https://data.gov.uk/dataset/historic-monthly-meteorological-station-data
+Description: Monthly Historical information for 37 UK Meteorological Stations
+Row count: ?
+Cities: (37 stations), not in every city	
+Columns datatype: numeric
+
+* - didn't finished at this moment
 
