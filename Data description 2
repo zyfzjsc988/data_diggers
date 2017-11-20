@@ -71,3 +71,14 @@ Row count: 161
 Cities: 161
 Columns datatype: numeric
 
+9]
+Dataset: *
+Title: Weather in the UK cities
+Source: https://data.gov.uk/dataset/historic-monthly-meteorological-station-data
+Description: Monthly Historical information for 37 UK Meteorological Stations
+Row count: ?
+Cities: (37 stations), not in every city	
+Columns datatype: numeric
+
+* - didn't finished at this moment
+
