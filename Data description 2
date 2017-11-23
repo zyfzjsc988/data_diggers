@@ -1,13 +1,15 @@
 
 1] 
-Dataset: r2_strategic_noise_mapping.csv
-Title: Number of People affected by noise in the UK cities and surroundings.
-Data: measured 2011
+Dataset: Number of people exposed to road traffic noise 55dB or more at NIGHT.csv
+Title: Number of people exposed to road traffic noise 55dB or more at NIGHT.csv
+Data: measured 2012
 Source: https://data.gov.uk/dataset/noise-exposure-data-england
-Description: The data show the estimated number of people affected by noise from road traffic, railway and industrial sources.
+Description: The data show the estimated number of people affected by noise from road traffic 55db or higher.
 Row count: 67
 UK Cities: 67
 Columns datatype: numeric
+EXTRA INFO: I chose 55db or more at night because of this article: http://www.euro.who.int/en/health-topics/environment-and-health/noise/policy/who-night-noise-guidelines-for-europe
+It says: "Long-term average exposure to levels above 55 dB, similar to the noise from a busy street, can trigger elevated blood pressure and heart attacks."
 
 2]
 Dataset: Median house price Uk cities.xls
