@@ -36,9 +36,9 @@ Dataset: total_jobs.csv
 Title: Uk cities, total number of jobs available
 Data: 2011
 Source: http://www.centreforcities.org/data-tool/dataset/european-cities#graph=bar&city=aberdeen&city=aldershot&city=barnsley&city=basildon&city=belfast&city=birkenhead&city=birmingham&city=blackburn&city=blackpool&city=bournemouth&city=bradford&city=brighton&city=bristol&city=burnley&city=cambridge&city=cardiff&city=chatham&city=coventry&city=crawley&city=derby&city=doncaster&city=dundee&city=edinburgh&city=exeter&city=glasgow&city=gloucester&city=huddersfield&city=hull&city=ipswich&city=leeds&city=leicester&city=liverpool&city=london&city=luton&city=manchester&city=mansfield&city=middlesbrough&city=milton-keynes&city=newcastle&city=newport&city=northampton&city=norwich&city=nottingham&city=oxford&city=peterborough&city=plymouth&city=portsmouth&city=preston&city=reading&city=sheffield&city=slough&city=southampton&city=southend&city=stoke&city=sunderland&city=swansea&city=swindon&city=telford&city=wakefield&city=warrington&city=wigan&city=worthing&city=york&sortOrder=high&indicator=total-jobs\\single\\2011&orient=horz
-Description: Population distribution by age of Uk cities in proportions. From 0-15, 16-64, 65+ and 85+ age in % of the total population of a particular city.
-Row count: 63
-UK Cities: 63
+Description: 
+Row count: 62
+UK Cities: 62
 Columns datatype: numeric
 
 5]
