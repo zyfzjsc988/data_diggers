@@ -100,11 +100,14 @@ def read_city(filename):
         f_csv = csv.reader(f)
         for row in f_csv:
             town = row[6]
-            if town != '' and town!='town':
-                if town not in s:
-                    l.append({'city_name': town, 'region': row[7], 'latitude': row[4], 'longitude': row[5],
-                              'uk_region': row[8]})
-                s.add(town)
+            if town!='town':
+                if town =='':
+                    town  = row[7]
+                    if town!='region':
+                        if town not in s:
+                            l.append({'city_name': town, 'region': row[7], 'latitude': row[4], 'longitude': row[5],
+                                      'uk_region': row[8]})
+                            s.add(town)
     print(l)
 
 
