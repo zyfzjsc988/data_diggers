@@ -103,12 +103,11 @@ def read_city(filename):
             if town!='town':
                 if town =='':
                     town  = row[7]
-                    if town!='region':
-                        if town not in s:
-                            l.append({'city_name': town, 'region': row[7], 'latitude': row[4], 'longitude': row[5],
+                if town not in s:
+                    l.append({'city_name': town, 'region': row[7], 'latitude': row[4], 'longitude': row[5],
                                       'uk_region': row[8]})
-                            s.add(town)
-    print(l)
+                    s.add(town)
+    print(len(l))
 
 
 
