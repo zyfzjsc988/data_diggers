@@ -16,12 +16,12 @@ import csv
 import json
 import xlrd
 import operator
-def max_min_normalize(dic):
-    maxi = max(dic.iteritems(), key=operator.itemgetter(1))[1]
-    mini = min(dic.iteritems(), key=operator.itemgetter(1))[1]
-    for key in dic:
-        dic[key] = (dic[key]-mini)/float(maxi-mini)
-    return dic
+# def max_min_normalize(dic):
+#     maxi = max(dic.iteritems(), key=operator.itemgetter(1))[1]
+#     mini = min(dic.iteritems(), key=operator.itemgetter(1))[1]
+#     for key in dic:
+#         dic[key] = (dic[key]-mini)/float(maxi-mini)
+#     return dic
 def read_csv(filename):
     dic = dict()
     with open(filename) as f:
@@ -34,7 +34,7 @@ def read_csv(filename):
                     dic[city_name] = 1
                 else:
                     dic[city_name] += 1
-    dic = max_min_normalize(dic)
+    # dic = max_min_normalize(dic)
     with open('pubs.json', 'w') as f:
         json.dump(dic, f)
 
@@ -50,7 +50,7 @@ def read_hospitals(filename):
             dic[col] = 1
         else:
             dic[col] += 1
-    dic = max_min_normalize(dic)
+    # dic = max_min_normalize(dic)
     with open('hospitals.json', 'w') as f:
         json.dump(dic, f)
 
@@ -67,7 +67,7 @@ def read_education(filename):
                 dic[col] = 1
             else:
                 dic[col] += 1
-    dic = max_min_normalize(dic)
+    # dic = max_min_normalize(dic)
 
     with open('education.json', 'w') as f:
         json.dump(dic, f)
@@ -87,7 +87,7 @@ def read_station(filename):
                 else:
                     dic[p[0]] += 1
 
-    dic = max_min_normalize(dic)
+    # dic = max_min_normalize(dic)
     with open('railway_station.json', 'w') as f:
         json.dump(dic, f)
 
@@ -115,8 +115,8 @@ def read_city(filename):
         json.dump(l, f)
 
 if __name__ == '__main__':
-    # read_csv('5.open_pubs.csv')
-    # read_hospitals('6.Hospitals.xlsx')
-    # read_education('4.Education_2017.xlsx')
-    # read_station('12.railway-stations.csv')
-    read_city('postcodes_reference.csv')
+    read_csv('5.open_pubs.csv')
+    read_hospitals('6.Hospitals.xlsx')
+    read_education('4.Education_2017.xlsx')
+    read_station('12.railway-stations.csv')
+    # read_city('postcodes_reference.csv')
