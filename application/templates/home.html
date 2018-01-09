@@ -5,12 +5,20 @@
     <title>What factors make you happy when moving to a new city</title>
 </head>
 <body>
+{% if cityName %}
+  <h1>{{ cityName }}</h1>
+    <h1>{{ status }}</h1>
+{% else %}
+  <h1>Default city</h1>
+{% endif %}
+
 <h1>Survey for "What factors make you happy when moving to a new city?"</h1>
 <p>This survey is going to take you approximately 3 minutes. Please fill in each question as truthfully as possible. Please do not take on this survey more than once.
 Thank you.</p>
+<form action='/request' method="post">
 <div id="age">
     <p>My age is :</p>
-    <select name="select" id="select_age" class="xla_k">
+    <select name="Age" id="select_age" class="xla_k">
     <option value="age1"><18</option>
     <option value="age2">18-25</option>
     <option value="age3">26-35</option>
@@ -23,7 +31,7 @@ Thank you.</p>
 
 <div id="gender">
     <p>I identify my gender as...</p>
-    <select name="select" id="select_gender" class="xla_k">
+    <select name="Gender" id="select_gender" class="xla_k">
     <option value="gender_f">Female</option>
     <option value="gender_m">Male</option>
     <option value="gender_x">Prefer not to disclose</option>
@@ -31,7 +39,7 @@ Thank you.</p>
 </div>
 <div id="region">
     <p>My home region is..</p>
-    <select name="select" id="select_region" class="xla_k">
+    <select name="Region" id="select_region" class="xla_k">
     <option value="region_EU">Europe(not UK)</option>
     <option value="region_UK">UK</option>
     <option value="region_Asia">Asia</option>
@@ -41,10 +49,10 @@ Thank you.</p>
 </div>
 <div id="employment">
     <p>Professional/Employment status: I am currently...</p>
-    <select name="select" id="select_work" class="xla_k">
+    <select name="Employment" id="select_work" class="xla_k">
     <option value="work_s1">Self-employed</option>
     <option value="work_s2">Employed for wages</option>
-    <option value="work_3">Out of work and looking for work</option>
+    <option value="work_s3">Out of work and looking for work</option>
     <option value="work_s4">Out of work but currently not looking for work</option>
     <option value="work_s5">A homemaker (housewife/househusband)</option>
     <option value="work_s6">A student</option>
@@ -55,14 +63,175 @@ Thank you.</p>
 </div>
 <div id="rank">
     <p>Rank the following options from the worst (1) to the best (5) *
-Below you will find some of the factors which people find important when deciding in which city to live. Rank them from the least important (1) to the most important (5), according to your own preferences. GVA PER WORKER*: Gross value added per worker is the value of goods and services produced in an area (productivity of each worker). Positively correlated with living standards and wealth. ENTERTAINMENT**: Number of pubs, clubs, cinemas, theatres etc.</p>
+Below you will find some of the factors which people find important when deciding in which city to live. Rank them from the least important (1) to the most important (5), according to your own preferences. GVA PER WORKER*: Gross value added per worker is the value of goods and services produced in an area
+        (productivity of each worker). Positively correlated with living standards and wealth. ENTERTAINMENT**: Number of pubs, clubs, cinemas, theatres etc.</p>
+    <p>
+<table border="1">
+    <tr>
+        <td></td>
+        <td>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+
+    </tr>
+    <tr>
+        <td>Flat/House prices</td>
+         <td>
+		<label><input name="HousePrice" type="radio" value="1" required/></label>
+		<label><input name="HousePrice" type="radio" value="2" /></label>
+		<label><input name="HousePrice" type="radio" value="3" /> </label>
+		<label><input name="HousePrice" type="radio" value="4" /> </label>
+		<label><input name="HousePrice" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+	    <tr>
+        <td>Population</td>
+        <td>
+		<label><input name="Population" type="radio" value="1" required/></label>
+		<label><input name="Population" type="radio" value="2" /></label>
+		<label><input name="Population" type="radio" value="3" /> </label>
+		<label><input name="Population" type="radio" value="4" /> </label>
+		<label><input name="Population" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+		    <tr>
+        <td>Road Traffic</td>
+        <td>
+		<label><input name="RoadTraffic" type="radio" value="1" required/></label>
+		<label><input name="RoadTraffic" type="radio" value="2" /></label>
+		<label><input name="RoadTraffic" type="radio" value="3" /> </label>
+		<label><input name="RoadTraffic" type="radio" value="4" /> </label>
+		<label><input name="RoadTraffic" type="radio" value="5" /> </label>
+		</form>
+		</td>
+    </tr>
+		    <tr>
+        <td>GVA per worker*</td>
+         <td>
+		<label><input name="GVA" type="radio" value="1" required/></label>
+		<label><input name="GVA" type="radio" value="2" /></label>
+		<label><input name="GVA" type="radio" value="3" /> </label>
+		<label><input name="GVA" type="radio" value="4" /> </label>
+		<label><input name="GVA" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+		    <tr>
+        <td>Unemployment rate</td>
+        <td>
+		<label><input name="Unemployment" type="radio" value="1" required/></label>
+		<label><input name="Unemployment" type="radio" value="2" /></label>
+		<label><input name="Unemployment" type="radio" value="3" /> </label>
+		<label><input name="Unemployment" type="radio" value="4" /> </label>
+		<label><input name="Unemployment" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+		    <tr>
+        <td>Noise level at night</td>
+        <td>
+		<label><input name="Noise" type="radio" value="1" required/></label>
+		<label><input name="Noise" type="radio" value="2" /></label>
+		<label><input name="Noise" type="radio" value="3" /> </label>
+		<label><input name="Noise" type="radio" value="4" /> </label>
+		<label><input name="Noise" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+		    <tr>
+        <td>Total Jobs available</td>
+        <td>
+
+		<label><input name="Jobs" type="radio" value="1" required/></label>
+		<label><input name="Jobs" type="radio" value="2" /></label>
+		<label><input name="Jobs" type="radio" value="3" /> </label>
+		<label><input name="Jobs" type="radio" value="4" /> </label>
+		<label><input name="Jobs" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+		    <tr>
+        <td>Weather</td>
+       <td>
+
+		<label><input name="Weather" type="radio" value="1" required/></label>
+		<label><input name="Weather" type="radio" value="2" /></label>
+		<label><input name="Weather" type="radio" value="3" /> </label>
+		<label><input name="Weather" type="radio" value="4" /> </label>
+		<label><input name="Weather" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+			    <tr>
+        <td>Number of schools</td>
+        <td>
+
+		<label><input name="Schools" type="radio" value="1" required/></label>
+		<label><input name="Schools" type="radio" value="2" /></label>
+		<label><input name="Schools" type="radio" value="3" /> </label>
+		<label><input name="Schools" type="radio" value="4" /> </label>
+		<label><input name="Schools" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+			    <tr>
+        <td>Entertainment**</td>
+        <td>
+
+		<label><input name="Entertainment" type="radio" value="1" required/></label>
+		<label><input name="Entertainment" type="radio" value="2" /></label>
+		<label><input name="Entertainment" type="radio" value="3" /> </label>
+		<label><input name="Entertainment" type="radio" value="4" /> </label>
+		<label><input name="Entertainment" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+			    <tr>
+        <td>Quality of higher education</td>
+        <td>
+
+		<label><input name="Education" type="radio" value="1" required/></label>
+		<label><input name="Education" type="radio" value="2" /></label>
+		<label><input name="Education" type="radio" value="3" /> </label>
+		<label><input name="Education" type="radio" value="4" /> </label>
+		<label><input name="Education" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+			    <tr>
+        <td>Number of hospitals</td>
+        <td>
+
+		<label><input name="Hospitals" type="radio" value="1" required/></label>
+		<label><input name="Hospitals" type="radio" value="2" /></label>
+		<label><input name="Hospitals" type="radio" value="3" /> </label>
+		<label><input name="Hospitals" type="radio" value="4" /> </label>
+		<label><input name="Hospitals" type="radio" value="5" /> </label>
+
+		</td>
+    </tr>
+		<tr>
+        <td>Connectivity to other cities</td>
+		<td>
+
+		<label><input name="Connectivity" type="radio" value="1" required/></label>
+		<label><input name="Connectivity" type="radio" value="2" /></label>
+		<label><input name="Connectivity" type="radio" value="3" /> </label>
+		<label><input name="Connectivity" type="radio" value="4" /> </label>
+		<label><input name="Connectivity" type="radio" value="5" /> </label>
+
+		</td>
+		</tr>
+    </tr>
+</table>
+</p>
 </div>
 
-<button id="submit">submit</button>
+{#<button id="submit">submit</button>#}
+<input type="submit" value="Submit">
+</form>
 <script>
-    function hhh(){
 
-    }
 </script>
 
 </body>
